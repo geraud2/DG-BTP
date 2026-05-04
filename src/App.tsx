@@ -11,6 +11,7 @@ import Personnel from './pages/Personnel';
 import Taches from './pages/Taches';
 import Chat from './pages/Chat';
 import Notifications from './pages/Notifications';
+import Assignation from './pages/Assignation';
 
 function App() {
   const [showSplash, setShowSplash] = useState(true);
@@ -34,6 +35,7 @@ function App() {
           <Route path="/taches" element={<Taches />} />
           <Route path="/chat" element={<Chat />} />
           <Route path="/notifications" element={<Notifications />} />
+          <Route path="/assignation" element={<Assignation />} />
         </Route>
       </Routes>
     </BrowserRouter>

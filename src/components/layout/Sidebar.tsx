@@ -11,6 +11,7 @@ import {
   ChevronLeft,
   ChevronRight,
   X,
+  ClipboardList,
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -28,6 +29,7 @@ const navItems = [
   { to: '/taches', icon: ListTodo, label: 'Tâches' },
   { to: '/chat', icon: MessageSquare, label: 'Chat' },
   { to: '/notifications', icon: Bell, label: 'Notifications' },
+  { to: '/assignation', icon: ClipboardList, label: 'Assignation' },
 ];
 
 export default function Sidebar({ collapsed, onToggle, isMobile }: SidebarProps) {
