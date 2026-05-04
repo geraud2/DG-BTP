@@ -106,7 +106,7 @@ export default function Sidebar({ collapsed, onToggle, isMobile }: SidebarProps)
       <div className="border-t border-gray-800 p-2">
         {(!collapsed || isMobile) ? (
           <div className="px-3 py-2 text-xs text-gray-500">
-            <p>BTP Stock Manager</p>
+            <p>DG Manager</p>
             <p className="text-gray-600">v1.0.0</p>
           </div>
         ) : (
