@@ -69,7 +69,7 @@ export default function Sidebar({ collapsed, onToggle, isMobile }: SidebarProps)
         <div className="px-4 py-3 border-b border-gray-800">
           <div className="flex items-center gap-2 text-amber-400">
             <span className="text-lg">🏗️</span>
-            <span className="text-xs font-bold uppercase tracking-wider">BTP Manager</span>
+            <span className="text-xs font-bold uppercase tracking-wider">DG Manager</span>
           </div>
         </div>
       )}
