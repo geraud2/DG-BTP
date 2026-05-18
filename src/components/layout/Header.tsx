@@ -1,13 +1,11 @@
 import { Link } from 'react-router-dom';
-import { Bell, Search, Wifi, WifiOff, Menu } from 'lucide-react';
+import { Bell, Search, Wifi, WifiOff } from 'lucide-react';
 
 interface HeaderProps {
   notificationCount: number;
-  onMenuToggle: () => void;
 }
 
-export default function Header({ notificationCount, onMenuToggle }: HeaderProps) {
-  // Simulation du statut en ligne
+export default function Header({ notificationCount }: HeaderProps) {
   const isOnline = typeof navigator !== 'undefined' ? navigator.onLine : true;
 
   return (
@@ -15,15 +13,6 @@ export default function Header({ notificationCount, onMenuToggle }: HeaderProps)
       <div className="flex items-center justify-between h-full px-3 sm:px-4 lg:px-6">
         {/* Gauche */}
         <div className="flex items-center gap-2 sm:gap-3">
-          {/* Burger menu - visible mobile seulement */}
-          <button 
-            onClick={onMenuToggle} 
-            className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors -ml-1"
-            aria-label="Menu"
-          >
-            <Menu size={20} className="text-gray-600" />
-          </button>
-
           {/* Barre de recherche - cachée sur mobile */}
           <div className="relative hidden md:block">
             <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
@@ -36,7 +25,7 @@ export default function Header({ notificationCount, onMenuToggle }: HeaderProps)
         </div>
 
         {/* Droite */}
-        <div className="flex items-center gap-1 sm:gap-3">
+        <div className="flex items-center gap-1 sm:gap-3 ml-auto">
           {/* Statut connexion */}
           <div className={`flex items-center gap-1 px-2 py-1 rounded-full text-[10px] sm:text-xs font-medium ${
             isOnline ? 'bg-emerald-50 text-emerald-700' : 'bg-red-50 text-red-700'

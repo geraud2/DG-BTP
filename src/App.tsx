@@ -11,6 +11,7 @@ import Personnel from './pages/Personnel';
 import Taches from './pages/Taches';
 import Chat from './pages/Chat';
 import Notifications from './pages/Notifications';
+import BottomNav from './components/layout/BottomNav';
 import Assignation from './pages/Assignation';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Dashboard />} />
+          <Route path="/bottomnav" element={<BottomNav />} />
           <Route path="/analytics" element={<Analytics />} />
           <Route path="/conges" element={<Conges />} />
           <Route path="/demandes" element={<Demandes />} />
