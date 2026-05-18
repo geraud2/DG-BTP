@@ -13,6 +13,7 @@ import Chat from './pages/Chat';
 import Notifications from './pages/Notifications';
 import BottomNav from './components/layout/BottomNav';
 import Assignation from './pages/Assignation';
+import Profil from './pages/Profil';
 
 function App() {
   const [showSplash, setShowSplash] = useState(true);
@@ -38,6 +39,7 @@ function App() {
           <Route path="/chat" element={<Chat />} />
           <Route path="/notifications" element={<Notifications />} />
           <Route path="/assignation" element={<Assignation />} />
+          <Route path="/profil" element={<Profil />} />
         </Route>
       </Routes>
     </BrowserRouter>
